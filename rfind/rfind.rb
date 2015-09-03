@@ -1,18 +1,11 @@
 #!/usr/bin/env ruby
 
-"happy.h" =~ /\.(|(rb)|(txt)|(erb)|(js)|(css)|(html)|(yml))$/
-a = `find .`
+userinput = ARGV[0]
 
-use split function from string
-
-filenames = `find -iname "*chico*"`.split
+# Finds all files with userinput and splits them into an
+# array of strings.
+filenames = `find -iname *#{userinput}*`.split
 puts filenames
 
-#how do I make a new array based on what this finds
-filenames.map { |dir| dir =~ /\.(|(rb)|(txt)|(erb)|(js)|(css)|(html)|(yml))$/ }
-
-[1, 2, 3].map { |n| n * n }
-
-
-
-Ruby is fun
+files = filenames.map { |dir| dir =~ /\.(|(rb)|(txt)|(erb)|(js)|(css)|(html)|(yml))$/ }
+puts files
