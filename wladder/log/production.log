@@ -1,0 +1,1175 @@
+I, [2015-10-07T10:43:12.612290 #1896]  INFO -- : Started GET "/wladder/" for 132.241.44.11 at 2015-10-07 10:43:12 -0700
+I, [2015-10-07T10:43:12.630903 #1896]  INFO -- : Processing by HomeController#index as HTML
+I, [2015-10-07T10:43:12.644352 #1896]  INFO -- : Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+F, [2015-10-07T10:43:12.648519 #1896] FATAL -- : 
+ActionView::MissingTemplate (Missing template home/index, application/index with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/adam/465/wladder/app/views"
+):
+  actionview (4.2.4) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.4) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.4) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.4) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.4) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.4) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.4) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.4) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.4) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.4) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.4) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.4) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.4) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.4) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.4) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /home/adam/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/benchmark.rb:303:in `realtime'
+  activesupport (4.2.4) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.4) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.4) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.4) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.4) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.4) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.4) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.4) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.4) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.4) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.4) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.4) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.4) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.4) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.4) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.4) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:76:in `call'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.4) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/rack/thread_handler_extension.rb:94:in `process_request'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:151:in `accept_and_process_next_request'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:112:in `main_loop'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler.rb:415:in `block (3 levels) in start_threads'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/utils.rb:112:in `block in create_thread_and_abort_on_exception'
+
+
+I, [2015-10-07T10:47:19.608254 #2267]  INFO -- : Started GET "/wladder/" for 132.241.44.11 at 2015-10-07 10:47:19 -0700
+I, [2015-10-07T10:47:19.616007 #2267]  INFO -- : Processing by HomeController#index as HTML
+I, [2015-10-07T10:47:19.630937 #2267]  INFO -- :   Rendered home/index.html.erb within layouts/application (1.0ms)
+I, [2015-10-07T10:47:19.633547 #2267]  INFO -- : Completed 200 OK in 17ms (Views: 9.1ms | ActiveRecord: 0.0ms)
+I, [2015-10-07T10:47:19.710270 #2267]  INFO -- : Started GET "/wladder/stylesheets/application.css" for 132.241.44.11 at 2015-10-07 10:47:19 -0700
+F, [2015-10-07T10:47:19.711724 #2267] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/rack/thread_handler_extension.rb:94:in `process_request'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:151:in `accept_and_process_next_request'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:112:in `main_loop'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler.rb:415:in `block (3 levels) in start_threads'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/utils.rb:112:in `block in create_thread_and_abort_on_exception'
+
+
+I, [2015-10-07T10:47:19.718252 #2267]  INFO -- : Started GET "/wladder/javascripts/application.js" for 132.241.44.11 at 2015-10-07 10:47:19 -0700
+F, [2015-10-07T10:47:19.719278 #2267] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/rack/thread_handler_extension.rb:94:in `process_request'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:151:in `accept_and_process_next_request'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:112:in `main_loop'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler.rb:415:in `block (3 levels) in start_threads'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/utils.rb:112:in `block in create_thread_and_abort_on_exception'
+
+
+I, [2015-10-07T12:32:27.914465 #2930]  INFO -- : Started GET "/wladder/" for 132.241.174.80 at 2015-10-07 12:32:27 -0700
+I, [2015-10-07T12:32:27.926062 #2930]  INFO -- : Processing by HomeController#index as HTML
+I, [2015-10-07T12:32:27.954876 #2930]  INFO -- :   Rendered home/index.html.erb within layouts/application (17.0ms)
+I, [2015-10-07T12:32:27.955201 #2930]  INFO -- : Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.0ms)
+F, [2015-10-07T12:32:27.957549 #2930] FATAL -- : 
+ActionView::Template::Error (undefined local variable or method `query_path' for #<#<Class:0x000000019f5c80>:0x000000019fdb88>):
+    1: <h1>Word Ladder Game</h1>
+    2: <br>
+    3: <%= form_tag(query_path, method: "get") do  %>
+    4:     <%= label_tag(:startword, " Start: ") %>
+    5:     <%= label tag(:step1, "Step 1: ") %>
+    6:     <%= label tag(:step2, "Step 2: ") %>
+  app/views/home/index.html.erb:3:in `_app_views_home_index_html_erb__2734147943117323265_13643140'
+
+
+I, [2015-10-07T12:36:59.736259 #3580]  INFO -- : Started GET "/wladder/" for 132.241.174.80 at 2015-10-07 12:36:59 -0700
+I, [2015-10-07T12:36:59.744157 #3580]  INFO -- : Processing by HomeController#index as HTML
+I, [2015-10-07T12:36:59.768892 #3580]  INFO -- :   Rendered home/index.html.erb within layouts/application (13.9ms)
+I, [2015-10-07T12:36:59.769273 #3580]  INFO -- : Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.0ms)
+F, [2015-10-07T12:36:59.771207 #3580] FATAL -- : 
+ActionView::Template::Error (undefined local variable or method `query_path' for #<#<Class:0x000000015aef28>:0x000000015b19f8>):
+    1: <h1>Word Ladder Game</h1>
+    2: <br>
+    3: <%= form_tag(query_path, method: "get") do  %>
+    4:     <%= label_tag(:startword, " Start: ") %>
+    5:     <%= label tag(:step1, "Step 1: ") %>
+    6:     <%= label tag(:step2, "Step 2: ") %>
+  app/views/home/index.html.erb:3:in `_app_views_home_index_html_erb__1959776786018882886_11397000'
+
+
+I, [2015-10-07T12:37:43.468452 #3795]  INFO -- : Started GET "/wladder/" for 132.241.174.80 at 2015-10-07 12:37:43 -0700
+I, [2015-10-07T12:37:43.475980 #3795]  INFO -- : Processing by HomeController#index as HTML
+I, [2015-10-07T12:37:43.499552 #3795]  INFO -- :   Rendered home/index.html.erb within layouts/application (13.0ms)
+I, [2015-10-07T12:37:43.499846 #3795]  INFO -- : Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.0ms)
+F, [2015-10-07T12:37:43.501633 #3795] FATAL -- : 
+ActionView::Template::Error (undefined local variable or method `query_path' for #<#<Class:0x0000000228c970>:0x000000022931d0>):
+    1: <h1>Word Ladder Game</h1>
+    2: #<br>
+    3: #<%= form_tag(query_path, method: "get") do  %>
+    4: #    <%= label_tag(:startword, " Start: ") %>
+    5: #    <%= label tag(:step1, "Step 1: ") %>
+    6: #    <%= label tag(:step2, "Step 2: ") %>
+  app/views/home/index.html.erb:3:in `_app_views_home_index_html_erb___1497242879320079880_18201140'
+
+
+I, [2015-10-07T12:39:01.781435 #4034]  INFO -- : Started GET "/wladder/" for 132.241.174.80 at 2015-10-07 12:39:01 -0700
+I, [2015-10-07T12:39:01.789036 #4034]  INFO -- : Processing by HomeController#index as HTML
+I, [2015-10-07T12:39:01.812894 #4034]  INFO -- :   Rendered home/index.html.erb within layouts/application (13.2ms)
+I, [2015-10-07T12:39:01.813234 #4034]  INFO -- : Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.0ms)
+F, [2015-10-07T12:39:01.815102 #4034] FATAL -- : 
+ActionView::Template::Error (undefined local variable or method `query_path' for #<#<Class:0x00000001c13d78>:0x00000001c1a010>):
+    1: <h1>Word Ladder Game</h1>
+    2: #<br>
+    3: #<%= form_tag(query_path, method: "get") do  %>
+    4: #    <%= label_tag(:startword, " Start: ") %>
+    5: #    <%= label tag(:step1, "Step 1: ") %>
+    6: #    <%= label tag(:step2, "Step 2: ") %>
+  app/views/home/index.html.erb:3:in `_app_views_home_index_html_erb__862442694567872282_14748620'
+
+
+I, [2015-10-07T12:39:25.239854 #4034]  INFO -- : Started GET "/wladder/" for 132.241.174.80 at 2015-10-07 12:39:25 -0700
+I, [2015-10-07T12:39:25.244586 #4034]  INFO -- : Processing by HomeController#index as HTML
+I, [2015-10-07T12:39:25.267271 #4034]  INFO -- :   Rendered home/index.html.erb within layouts/application (20.2ms)
+I, [2015-10-07T12:39:25.267590 #4034]  INFO -- : Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.0ms)
+F, [2015-10-07T12:39:25.269023 #4034] FATAL -- : 
+ActionView::Template::Error (undefined local variable or method `query_path' for #<#<Class:0x00000001c13d78>:0x000000023462d0>):
+    1: <h1>Word Ladder Game</h1>
+    2: #<br>
+    3: #<%= form_tag(query_path, method: "get") do  %>
+    4: #    <%= label_tag(:startword, " Start: ") %>
+    5: #    <%= label tag(:step1, "Step 1: ") %>
+    6: #    <%= label tag(:step2, "Step 2: ") %>
+  app/views/home/index.html.erb:3:in `_app_views_home_index_html_erb__862442694567872282_14748620'
+
+
+I, [2015-10-07T13:21:20.909698 #1638]  INFO -- : Started GET "/wladder/" for 132.241.174.80 at 2015-10-07 13:21:20 -0700
+I, [2015-10-07T13:21:20.920260 #1638]  INFO -- : Processing by HomeController#index as HTML
+I, [2015-10-07T13:21:20.949639 #1638]  INFO -- :   Rendered home/index.html.erb within layouts/application (16.6ms)
+I, [2015-10-07T13:21:20.950014 #1638]  INFO -- : Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.0ms)
+F, [2015-10-07T13:21:20.952399 #1638] FATAL -- : 
+ActionView::Template::Error (undefined local variable or method `query_path' for #<#<Class:0x0000000275eef8>:0x00000002762328>):
+    1: <h1>Word Ladder Game</h1>
+    2: <br>
+    3: <%= form_tag(query_path, method: "get") do  %>
+    4:     <%= label_tag(:startword, " Start: ") %>
+    5:     <%= label tag(:step1, "Step 1: ") %>
+    6:     <%= label tag(:step2, "Step 2: ") %>
+  app/views/home/index.html.erb:3:in `_app_views_home_index_html_erb___22110088452603211_20730020'
+
+
+I, [2015-10-07T13:51:35.743500 #1638]  INFO -- : Started GET "/wladder/" for 132.241.174.80 at 2015-10-07 13:51:35 -0700
+I, [2015-10-07T13:51:35.749324 #1638]  INFO -- : Processing by HomeController#index as HTML
+I, [2015-10-07T13:51:35.772483 #1638]  INFO -- :   Rendered home/index.html.erb within layouts/application (19.7ms)
+I, [2015-10-07T13:51:35.772786 #1638]  INFO -- : Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.0ms)
+F, [2015-10-07T13:51:35.774256 #1638] FATAL -- : 
+ActionView::Template::Error (undefined local variable or method `query_path' for #<#<Class:0x0000000275eef8>:0x00000002e552c0>):
+    1: <h1>Word Ladder Game</h1>
+    2: <br>
+  app/views/home/index.html.erb:3:in `_app_views_home_index_html_erb___22110088452603211_20730020'
+
+
+I, [2015-10-07T13:52:22.328050 #3139]  INFO -- : Started GET "/wladder/" for 132.241.174.80 at 2015-10-07 13:52:22 -0700
+I, [2015-10-07T13:52:22.339568 #3139]  INFO -- : Processing by HomeController#index as HTML
+I, [2015-10-07T13:52:22.353347 #3139]  INFO -- :   Rendered home/index.html.erb within layouts/application (1.0ms)
+I, [2015-10-07T13:52:22.356294 #3139]  INFO -- : Completed 200 OK in 17ms (Views: 6.9ms | ActiveRecord: 0.0ms)
+I, [2015-10-07T13:52:22.470367 #3139]  INFO -- : Started GET "/wladder/stylesheets/application.css" for 132.241.174.80 at 2015-10-07 13:52:22 -0700
+F, [2015-10-07T13:52:22.472272 #3139] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/rack/thread_handler_extension.rb:94:in `process_request'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:151:in `accept_and_process_next_request'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:112:in `main_loop'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler.rb:415:in `block (3 levels) in start_threads'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/utils.rb:112:in `block in create_thread_and_abort_on_exception'
+
+
+I, [2015-10-07T13:52:22.493838 #3139]  INFO -- : Started GET "/wladder/javascripts/application.js" for 132.241.174.80 at 2015-10-07 13:52:22 -0700
+F, [2015-10-07T13:52:22.495575 #3139] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/rack/thread_handler_extension.rb:94:in `process_request'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:151:in `accept_and_process_next_request'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:112:in `main_loop'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler.rb:415:in `block (3 levels) in start_threads'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/utils.rb:112:in `block in create_thread_and_abort_on_exception'
+
+
+I, [2015-10-07T15:40:42.855307 #4548]  INFO -- : Started GET "/wladder/" for 132.241.174.80 at 2015-10-07 15:40:42 -0700
+I, [2015-10-07T15:40:42.866341 #4548]  INFO -- : Processing by HomeController#index as HTML
+I, [2015-10-07T15:40:42.896394 #4548]  INFO -- :   Rendered home/index.html.erb within layouts/application (16.7ms)
+I, [2015-10-07T15:40:42.896786 #4548]  INFO -- : Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.0ms)
+F, [2015-10-07T15:40:42.899120 #4548] FATAL -- : 
+ActionView::Template::Error (undefined local variable or method `query_path' for #<#<Class:0x00000002bd41b8>:0x00000002c33a00>):
+    1: <h1>Word Ladder Game</h1>
+    2: <br>
+    3: <%= form_tag(query_path, method: "get") do  %>
+    4:     <%= start_tag(:starword, " Start: ") %>
+    5:     <%= step1_tag(:step1, " Step 1: ") %>
+    6:     <%= step2_tag(:step2, " Step 2: ") %>
+  app/views/home/index.html.erb:3:in `_app_views_home_index_html_erb__2373938079936200119_23208260'
+
+
+I, [2015-10-07T15:43:20.133924 #1686]  INFO -- : Started GET "/wladder/" for 132.241.174.80 at 2015-10-07 15:43:20 -0700
+I, [2015-10-07T15:43:20.145629 #1686]  INFO -- : Processing by HomeController#index as HTML
+I, [2015-10-07T15:43:20.177573 #1686]  INFO -- :   Rendered home/index.html.erb within layouts/application (17.6ms)
+I, [2015-10-07T15:43:20.178071 #1686]  INFO -- : Completed 500 Internal Server Error in 32ms (ActiveRecord: 0.0ms)
+F, [2015-10-07T15:43:20.180609 #1686] FATAL -- : 
+ActionView::Template::Error (undefined local variable or method `query_path' for #<#<Class:0x00000001fedca0>:0x0000000202bd20>):
+    1: <h1>Word Ladder Game</h1>
+    2: <br>
+    3: <%= form_tag(query_path, method: "get") do  %>
+    4:     <%= start_tag(:starword, " Start: ") %>
+    5:     <%= step1_tag(:step1, " Step 1: ") %>
+    6:     <%= step2_tag(:step2, " Step 2: ") %>
+  app/views/home/index.html.erb:3:in `_app_views_home_index_html_erb__1364450928790192086_16899720'
+
+
+I, [2015-10-07T17:22:06.375855 #1564]  INFO -- : Started GET "/wladder/" for 132.241.174.80 at 2015-10-07 17:22:06 -0700
+I, [2015-10-07T17:22:06.393253 #1564]  INFO -- : Processing by HomeController#index as HTML
+I, [2015-10-07T17:22:06.430786 #1564]  INFO -- :   Rendered home/index.html.erb within layouts/application (22.7ms)
+I, [2015-10-07T17:22:06.431230 #1564]  INFO -- : Completed 500 Internal Server Error in 38ms (ActiveRecord: 0.0ms)
+F, [2015-10-07T17:22:06.433680 #1564] FATAL -- : 
+ActionView::Template::Error (undefined method `start_tag' for #<#<Class:0x00000002813240>:0x00000002821278>):
+    1: <h1>Word Ladder Game</h1>
+    2: <br>
+    3: <%= form_tag(query_path, method: "get") do  %>
+    4:     <%= start_tag(:starword, " Start: ") %>
+    5:     <%= step1_tag(:step1, " Step 1: ") %>
+    6:     <%= step2_tag(:step2, " Step 2: ") %>
+    7:     <%= step3_tag(:step3, " Step 3: ") %>
+  app/views/home/index.html.erb:4:in `block in _app_views_home_index_html_erb__2641012668149225163_21077760'
+  app/views/home/index.html.erb:3:in `_app_views_home_index_html_erb__2641012668149225163_21077760'
+
+
+I, [2015-10-07T23:44:24.198448 #2512]  INFO -- : Started GET "/wladder/" for 73.235.44.54 at 2015-10-07 23:44:24 -0700
+I, [2015-10-07T23:44:24.209792 #2512]  INFO -- : Processing by HomeController#index as HTML
+I, [2015-10-07T23:44:24.255158 #2512]  INFO -- :   Rendered home/index.html.erb within layouts/application (32.8ms)
+I, [2015-10-07T23:44:24.258041 #2512]  INFO -- : Completed 200 OK in 48ms (Views: 38.8ms | ActiveRecord: 0.0ms)
+I, [2015-10-07T23:44:24.405215 #2512]  INFO -- : Started GET "/wladder/stylesheets/application.css" for 73.235.44.54 at 2015-10-07 23:44:24 -0700
+F, [2015-10-07T23:44:24.406434 #2512] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/rack/thread_handler_extension.rb:94:in `process_request'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:151:in `accept_and_process_next_request'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:112:in `main_loop'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler.rb:415:in `block (3 levels) in start_threads'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/utils.rb:112:in `block in create_thread_and_abort_on_exception'
+
+
+I, [2015-10-07T23:44:24.464180 #2512]  INFO -- : Started GET "/wladder/javascripts/application.js" for 73.235.44.54 at 2015-10-07 23:44:24 -0700
+F, [2015-10-07T23:44:24.465326 #2512] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/rack/thread_handler_extension.rb:94:in `process_request'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:151:in `accept_and_process_next_request'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:112:in `main_loop'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler.rb:415:in `block (3 levels) in start_threads'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/utils.rb:112:in `block in create_thread_and_abort_on_exception'
+
+
+I, [2015-10-07T23:44:29.456399 #2512]  INFO -- : Started GET "/wladder/query?utf8=%E2%9C%93&step1=&step2=&step3=&step4=&step5=&commit=Try" for 73.235.44.54 at 2015-10-07 23:44:29 -0700
+I, [2015-10-07T23:44:29.458364 #2512]  INFO -- : Processing by HomeController#show as HTML
+I, [2015-10-07T23:44:29.458459 #2512]  INFO -- :   Parameters: {"utf8"=>"✓", "step1"=>"", "step2"=>"", "step3"=>"", "step4"=>"", "step5"=>"", "commit"=>"Try"}
+I, [2015-10-07T23:44:29.461670 #2512]  INFO -- :   Rendered home/show.html.erb within layouts/application (0.7ms)
+I, [2015-10-07T23:44:29.462856 #2512]  INFO -- : Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+I, [2015-10-07T23:44:29.581997 #2512]  INFO -- : Started GET "/wladder/stylesheets/application.css" for 73.235.44.54 at 2015-10-07 23:44:29 -0700
+F, [2015-10-07T23:44:29.583310 #2512] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/rack/thread_handler_extension.rb:94:in `process_request'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:151:in `accept_and_process_next_request'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:112:in `main_loop'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler.rb:415:in `block (3 levels) in start_threads'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/utils.rb:112:in `block in create_thread_and_abort_on_exception'
+
+
+I, [2015-10-07T23:44:29.616201 #2512]  INFO -- : Started GET "/wladder/javascripts/application.js" for 73.235.44.54 at 2015-10-07 23:44:29 -0700
+F, [2015-10-07T23:44:29.617127 #2512] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/rack/thread_handler_extension.rb:94:in `process_request'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:151:in `accept_and_process_next_request'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:112:in `main_loop'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler.rb:415:in `block (3 levels) in start_threads'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/utils.rb:112:in `block in create_thread_and_abort_on_exception'
+
+
+I, [2015-10-07T23:44:54.460612 #2512]  INFO -- : Started GET "/wladder/query?utf8=%E2%9C%93&step1=&step2=&step3=&step4=&step5=&commit=Try" for 73.235.44.54 at 2015-10-07 23:44:54 -0700
+I, [2015-10-07T23:44:54.462118 #2512]  INFO -- : Processing by HomeController#show as HTML
+I, [2015-10-07T23:44:54.462204 #2512]  INFO -- :   Parameters: {"utf8"=>"✓", "step1"=>"", "step2"=>"", "step3"=>"", "step4"=>"", "step5"=>"", "commit"=>"Try"}
+I, [2015-10-07T23:44:54.463489 #2512]  INFO -- :   Rendered home/show.html.erb within layouts/application (0.1ms)
+I, [2015-10-07T23:44:54.464246 #2512]  INFO -- : Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+I, [2015-10-07T23:44:54.722369 #2512]  INFO -- : Started GET "/wladder/stylesheets/application.css" for 73.235.44.54 at 2015-10-07 23:44:54 -0700
+F, [2015-10-07T23:44:54.723772 #2512] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/rack/thread_handler_extension.rb:94:in `process_request'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:151:in `accept_and_process_next_request'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:112:in `main_loop'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler.rb:415:in `block (3 levels) in start_threads'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/utils.rb:112:in `block in create_thread_and_abort_on_exception'
+
+
+I, [2015-10-07T23:44:54.783752 #2512]  INFO -- : Started GET "/wladder/javascripts/application.js" for 73.235.44.54 at 2015-10-07 23:44:54 -0700
+F, [2015-10-07T23:44:54.784857 #2512] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/rack/thread_handler_extension.rb:94:in `process_request'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:151:in `accept_and_process_next_request'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:112:in `main_loop'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler.rb:415:in `block (3 levels) in start_threads'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/utils.rb:112:in `block in create_thread_and_abort_on_exception'
+
+
+I, [2015-10-07T23:45:03.103594 #2512]  INFO -- : Started GET "/wladder/" for 73.235.44.54 at 2015-10-07 23:45:03 -0700
+I, [2015-10-07T23:45:03.104530 #2512]  INFO -- : Processing by HomeController#index as HTML
+I, [2015-10-07T23:45:03.116772 #2512]  INFO -- :   Rendered home/index.html.erb within layouts/application (11.2ms)
+I, [2015-10-07T23:45:03.118016 #2512]  INFO -- : Completed 200 OK in 13ms (Views: 12.6ms | ActiveRecord: 0.0ms)
+I, [2015-10-07T23:45:03.309382 #2512]  INFO -- : Started GET "/wladder/stylesheets/application.css" for 73.235.44.54 at 2015-10-07 23:45:03 -0700
+F, [2015-10-07T23:45:03.310447 #2512] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/rack/thread_handler_extension.rb:94:in `process_request'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:151:in `accept_and_process_next_request'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:112:in `main_loop'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler.rb:415:in `block (3 levels) in start_threads'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/utils.rb:112:in `block in create_thread_and_abort_on_exception'
+
+
+I, [2015-10-07T23:45:03.334416 #2512]  INFO -- : Started GET "/wladder/javascripts/application.js" for 73.235.44.54 at 2015-10-07 23:45:03 -0700
+F, [2015-10-07T23:45:03.335358 #2512] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/rack/thread_handler_extension.rb:94:in `process_request'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:151:in `accept_and_process_next_request'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:112:in `main_loop'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler.rb:415:in `block (3 levels) in start_threads'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/utils.rb:112:in `block in create_thread_and_abort_on_exception'
+
+
+I, [2015-10-07T23:45:12.831242 #2512]  INFO -- : Started GET "/wladder/query?utf8=%E2%9C%93&step1=fdsa&step2=asdf&step3=asf&step4=fdsa&step5=dfasdf&commit=Try" for 73.235.44.54 at 2015-10-07 23:45:12 -0700
+I, [2015-10-07T23:45:12.832569 #2512]  INFO -- : Processing by HomeController#show as HTML
+I, [2015-10-07T23:45:12.832668 #2512]  INFO -- :   Parameters: {"utf8"=>"✓", "step1"=>"fdsa", "step2"=>"asdf", "step3"=>"asf", "step4"=>"fdsa", "step5"=>"dfasdf", "commit"=>"Try"}
+I, [2015-10-07T23:45:12.833951 #2512]  INFO -- :   Rendered home/show.html.erb within layouts/application (0.1ms)
+I, [2015-10-07T23:45:12.834689 #2512]  INFO -- : Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+I, [2015-10-07T23:45:13.402387 #2512]  INFO -- : Started GET "/wladder/stylesheets/application.css" for 73.235.44.54 at 2015-10-07 23:45:13 -0700
+F, [2015-10-07T23:45:13.403491 #2512] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/rack/thread_handler_extension.rb:94:in `process_request'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:151:in `accept_and_process_next_request'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:112:in `main_loop'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler.rb:415:in `block (3 levels) in start_threads'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/utils.rb:112:in `block in create_thread_and_abort_on_exception'
+
+
+I, [2015-10-07T23:45:13.877676 #2512]  INFO -- : Started GET "/wladder/javascripts/application.js" for 73.235.44.54 at 2015-10-07 23:45:13 -0700
+F, [2015-10-07T23:45:13.878622 #2512] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/rack/thread_handler_extension.rb:94:in `process_request'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:151:in `accept_and_process_next_request'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:112:in `main_loop'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler.rb:415:in `block (3 levels) in start_threads'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/utils.rb:112:in `block in create_thread_and_abort_on_exception'
+
+
+I, [2015-10-07T23:47:43.992858 #2512]  INFO -- : Started GET "/wladder/" for 73.235.44.54 at 2015-10-07 23:47:43 -0700
+I, [2015-10-07T23:47:43.993963 #2512]  INFO -- : Processing by HomeController#index as HTML
+I, [2015-10-07T23:47:44.002445 #2512]  INFO -- :   Rendered home/index.html.erb within layouts/application (7.5ms)
+I, [2015-10-07T23:47:44.003367 #2512]  INFO -- : Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.0ms)
+I, [2015-10-07T23:47:44.186968 #2512]  INFO -- : Started GET "/wladder/stylesheets/application.css" for 73.235.44.54 at 2015-10-07 23:47:44 -0700
+F, [2015-10-07T23:47:44.188047 #2512] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/rack/thread_handler_extension.rb:94:in `process_request'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:151:in `accept_and_process_next_request'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:112:in `main_loop'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler.rb:415:in `block (3 levels) in start_threads'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/utils.rb:112:in `block in create_thread_and_abort_on_exception'
+
+
+I, [2015-10-07T23:47:44.220389 #2512]  INFO -- : Started GET "/wladder/javascripts/application.js" for 73.235.44.54 at 2015-10-07 23:47:44 -0700
+F, [2015-10-07T23:47:44.221415 #2512] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/rack/thread_handler_extension.rb:94:in `process_request'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:151:in `accept_and_process_next_request'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:112:in `main_loop'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler.rb:415:in `block (3 levels) in start_threads'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/utils.rb:112:in `block in create_thread_and_abort_on_exception'
+
+
+I, [2015-10-07T23:47:45.812132 #2512]  INFO -- : Started GET "/wladder/query?utf8=%E2%9C%93&step1=&step2=&step3=&step4=&step5=&commit=Try" for 73.235.44.54 at 2015-10-07 23:47:45 -0700
+I, [2015-10-07T23:47:45.814231 #2512]  INFO -- : Processing by HomeController#show as HTML
+I, [2015-10-07T23:47:45.814371 #2512]  INFO -- :   Parameters: {"utf8"=>"✓", "step1"=>"", "step2"=>"", "step3"=>"", "step4"=>"", "step5"=>"", "commit"=>"Try"}
+I, [2015-10-07T23:47:45.816106 #2512]  INFO -- :   Rendered home/show.html.erb within layouts/application (0.1ms)
+I, [2015-10-07T23:47:45.817323 #2512]  INFO -- : Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.0ms)
+I, [2015-10-07T23:47:45.979751 #2512]  INFO -- : Started GET "/wladder/stylesheets/application.css" for 73.235.44.54 at 2015-10-07 23:47:45 -0700
+F, [2015-10-07T23:47:45.980797 #2512] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/rack/thread_handler_extension.rb:94:in `process_request'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:151:in `accept_and_process_next_request'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:112:in `main_loop'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler.rb:415:in `block (3 levels) in start_threads'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/utils.rb:112:in `block in create_thread_and_abort_on_exception'
+
+
+I, [2015-10-07T23:47:45.989516 #2512]  INFO -- : Started GET "/wladder/javascripts/application.js" for 73.235.44.54 at 2015-10-07 23:47:45 -0700
+F, [2015-10-07T23:47:45.990205 #2512] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/rack/thread_handler_extension.rb:94:in `process_request'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:151:in `accept_and_process_next_request'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:112:in `main_loop'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler.rb:415:in `block (3 levels) in start_threads'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/utils.rb:112:in `block in create_thread_and_abort_on_exception'
+
+
+I, [2015-10-07T23:48:11.386444 #2512]  INFO -- : Started GET "/wladder/" for 73.235.44.54 at 2015-10-07 23:48:11 -0700
+I, [2015-10-07T23:48:11.387445 #2512]  INFO -- : Processing by HomeController#index as HTML
+I, [2015-10-07T23:48:11.408237 #2512]  INFO -- :   Rendered home/index.html.erb within layouts/application (19.7ms)
+I, [2015-10-07T23:48:11.409602 #2512]  INFO -- : Completed 200 OK in 22ms (Views: 21.3ms | ActiveRecord: 0.0ms)
+I, [2015-10-07T23:48:11.528321 #2512]  INFO -- : Started GET "/wladder/stylesheets/application.css" for 73.235.44.54 at 2015-10-07 23:48:11 -0700
+F, [2015-10-07T23:48:11.529448 #2512] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/rack/thread_handler_extension.rb:94:in `process_request'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:151:in `accept_and_process_next_request'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:112:in `main_loop'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler.rb:415:in `block (3 levels) in start_threads'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/utils.rb:112:in `block in create_thread_and_abort_on_exception'
+
+
+I, [2015-10-07T23:48:11.571369 #2512]  INFO -- : Started GET "/wladder/javascripts/application.js" for 73.235.44.54 at 2015-10-07 23:48:11 -0700
+F, [2015-10-07T23:48:11.572307 #2512] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/rack/thread_handler_extension.rb:94:in `process_request'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:151:in `accept_and_process_next_request'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:112:in `main_loop'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler.rb:415:in `block (3 levels) in start_threads'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/utils.rb:112:in `block in create_thread_and_abort_on_exception'
+
+
+I, [2015-10-07T23:48:15.302864 #2512]  INFO -- : Started GET "/wladder/query?utf8=%E2%9C%93&step1=hello&step2=bye&step3=&step4=&step5=&commit=Try" for 73.235.44.54 at 2015-10-07 23:48:15 -0700
+I, [2015-10-07T23:48:15.304870 #2512]  INFO -- : Processing by HomeController#show as HTML
+I, [2015-10-07T23:48:15.305127 #2512]  INFO -- :   Parameters: {"utf8"=>"✓", "step1"=>"hello", "step2"=>"bye", "step3"=>"", "step4"=>"", "step5"=>"", "commit"=>"Try"}
+I, [2015-10-07T23:48:15.307147 #2512]  INFO -- :   Rendered home/show.html.erb within layouts/application (0.2ms)
+I, [2015-10-07T23:48:15.308356 #2512]  INFO -- : Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+I, [2015-10-07T23:48:15.438331 #2512]  INFO -- : Started GET "/wladder/stylesheets/application.css" for 73.235.44.54 at 2015-10-07 23:48:15 -0700
+F, [2015-10-07T23:48:15.439757 #2512] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/rack/thread_handler_extension.rb:94:in `process_request'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:151:in `accept_and_process_next_request'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:112:in `main_loop'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler.rb:415:in `block (3 levels) in start_threads'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/utils.rb:112:in `block in create_thread_and_abort_on_exception'
+
+
+I, [2015-10-07T23:48:15.469615 #2512]  INFO -- : Started GET "/wladder/javascripts/application.js" for 73.235.44.54 at 2015-10-07 23:48:15 -0700
+F, [2015-10-07T23:48:15.470637 #2512] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/rack/thread_handler_extension.rb:94:in `process_request'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:151:in `accept_and_process_next_request'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:112:in `main_loop'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler.rb:415:in `block (3 levels) in start_threads'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/utils.rb:112:in `block in create_thread_and_abort_on_exception'
+
+
+I, [2015-10-07T23:56:13.440825 #2512]  INFO -- : Started GET "/wladder/" for 73.235.44.54 at 2015-10-07 23:56:13 -0700
+I, [2015-10-07T23:56:13.447701 #2512]  INFO -- : Processing by HomeController#index as HTML
+I, [2015-10-07T23:56:13.461462 #2512]  INFO -- :   Rendered home/index.html.erb within layouts/application (10.9ms)
+I, [2015-10-07T23:56:13.463551 #2512]  INFO -- : Completed 200 OK in 16ms (Views: 13.4ms | ActiveRecord: 0.0ms)
+I, [2015-10-07T23:56:13.647669 #2512]  INFO -- : Started GET "/wladder/stylesheets/application.css" for 73.235.44.54 at 2015-10-07 23:56:13 -0700
+F, [2015-10-07T23:56:13.650461 #2512] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/rack/thread_handler_extension.rb:94:in `process_request'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:151:in `accept_and_process_next_request'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:112:in `main_loop'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler.rb:415:in `block (3 levels) in start_threads'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/utils.rb:112:in `block in create_thread_and_abort_on_exception'
+
+
+I, [2015-10-07T23:56:13.744987 #2512]  INFO -- : Started GET "/wladder/javascripts/application.js" for 73.235.44.54 at 2015-10-07 23:56:13 -0700
+F, [2015-10-07T23:56:13.745913 #2512] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/rack/thread_handler_extension.rb:94:in `process_request'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:151:in `accept_and_process_next_request'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:112:in `main_loop'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler.rb:415:in `block (3 levels) in start_threads'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/utils.rb:112:in `block in create_thread_and_abort_on_exception'
+
+
+I, [2015-10-07T23:56:20.785676 #2512]  INFO -- : Started GET "/wladder/query?utf8=%E2%9C%93&step1=ss&step2=sds&step3=asda&step4=&step5=&commit=Try" for 73.235.44.54 at 2015-10-07 23:56:20 -0700
+I, [2015-10-07T23:56:20.787262 #2512]  INFO -- : Processing by HomeController#show as HTML
+I, [2015-10-07T23:56:20.787379 #2512]  INFO -- :   Parameters: {"utf8"=>"✓", "step1"=>"ss", "step2"=>"sds", "step3"=>"asda", "step4"=>"", "step5"=>"", "commit"=>"Try"}
+I, [2015-10-07T23:56:20.789035 #2512]  INFO -- :   Rendered home/show.html.erb within layouts/application (0.1ms)
+I, [2015-10-07T23:56:20.789747 #2512]  INFO -- : Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+I, [2015-10-07T23:56:20.982759 #2512]  INFO -- : Started GET "/wladder/stylesheets/application.css" for 73.235.44.54 at 2015-10-07 23:56:20 -0700
+F, [2015-10-07T23:56:20.984371 #2512] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/rack/thread_handler_extension.rb:94:in `process_request'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:151:in `accept_and_process_next_request'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:112:in `main_loop'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler.rb:415:in `block (3 levels) in start_threads'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/utils.rb:112:in `block in create_thread_and_abort_on_exception'
+
+
+I, [2015-10-07T23:56:21.031853 #2512]  INFO -- : Started GET "/wladder/javascripts/application.js" for 73.235.44.54 at 2015-10-07 23:56:21 -0700
+F, [2015-10-07T23:56:21.033757 #2512] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/rack/thread_handler_extension.rb:94:in `process_request'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:151:in `accept_and_process_next_request'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:112:in `main_loop'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler.rb:415:in `block (3 levels) in start_threads'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/utils.rb:112:in `block in create_thread_and_abort_on_exception'
+
+
+I, [2015-10-07T23:56:24.387031 #2512]  INFO -- : Started GET "/wladder/" for 73.235.44.54 at 2015-10-07 23:56:24 -0700
+I, [2015-10-07T23:56:24.388184 #2512]  INFO -- : Processing by HomeController#index as HTML
+I, [2015-10-07T23:56:24.400339 #2512]  INFO -- :   Rendered home/index.html.erb within layouts/application (10.2ms)
+I, [2015-10-07T23:56:24.401425 #2512]  INFO -- : Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+I, [2015-10-07T23:56:24.646655 #2512]  INFO -- : Started GET "/wladder/stylesheets/application.css" for 73.235.44.54 at 2015-10-07 23:56:24 -0700
+F, [2015-10-07T23:56:24.648806 #2512] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/rack/thread_handler_extension.rb:94:in `process_request'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:151:in `accept_and_process_next_request'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:112:in `main_loop'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler.rb:415:in `block (3 levels) in start_threads'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/utils.rb:112:in `block in create_thread_and_abort_on_exception'
+
+
+I, [2015-10-07T23:56:24.677951 #2512]  INFO -- : Started GET "/wladder/javascripts/application.js" for 73.235.44.54 at 2015-10-07 23:56:24 -0700
+F, [2015-10-07T23:56:24.679465 #2512] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/rack/thread_handler_extension.rb:94:in `process_request'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:151:in `accept_and_process_next_request'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:112:in `main_loop'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler.rb:415:in `block (3 levels) in start_threads'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/utils.rb:112:in `block in create_thread_and_abort_on_exception'
+
+
+I, [2015-10-07T23:56:37.087104 #3160]  INFO -- : Started GET "/wladder/" for 73.235.44.54 at 2015-10-07 23:56:37 -0700
+I, [2015-10-07T23:56:37.096972 #3160]  INFO -- : Processing by HomeController#index as HTML
+I, [2015-10-07T23:56:37.131262 #3160]  INFO -- :   Rendered home/index.html.erb within layouts/application (21.8ms)
+I, [2015-10-07T23:56:37.133548 #3160]  INFO -- : Completed 200 OK in 36ms (Views: 26.8ms | ActiveRecord: 0.0ms)
+I, [2015-10-07T23:56:37.325533 #3160]  INFO -- : Started GET "/wladder/stylesheets/application.css" for 73.235.44.54 at 2015-10-07 23:56:37 -0700
+F, [2015-10-07T23:56:37.327426 #3160] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/rack/thread_handler_extension.rb:94:in `process_request'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:151:in `accept_and_process_next_request'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:112:in `main_loop'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler.rb:415:in `block (3 levels) in start_threads'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/utils.rb:112:in `block in create_thread_and_abort_on_exception'
+
+
+I, [2015-10-07T23:56:37.343286 #3160]  INFO -- : Started GET "/wladder/javascripts/application.js" for 73.235.44.54 at 2015-10-07 23:56:37 -0700
+F, [2015-10-07T23:56:37.344740 #3160] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/rack/thread_handler_extension.rb:94:in `process_request'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:151:in `accept_and_process_next_request'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:112:in `main_loop'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler.rb:415:in `block (3 levels) in start_threads'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/utils.rb:112:in `block in create_thread_and_abort_on_exception'
+
+
+I, [2015-10-07T23:56:38.666110 #3160]  INFO -- : Started GET "/wladder/query?utf8=%E2%9C%93&step1=&step2=&step3=&step4=&step5=&commit=Try" for 73.235.44.54 at 2015-10-07 23:56:38 -0700
+I, [2015-10-07T23:56:38.668680 #3160]  INFO -- : Processing by HomeController#show as HTML
+I, [2015-10-07T23:56:38.668866 #3160]  INFO -- :   Parameters: {"utf8"=>"✓", "step1"=>"", "step2"=>"", "step3"=>"", "step4"=>"", "step5"=>"", "commit"=>"Try"}
+I, [2015-10-07T23:56:38.672649 #3160]  INFO -- :   Rendered home/show.html.erb within layouts/application (0.8ms)
+I, [2015-10-07T23:56:38.673480 #3160]  INFO -- : Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+I, [2015-10-07T23:56:38.833028 #3160]  INFO -- : Started GET "/wladder/stylesheets/application.css" for 73.235.44.54 at 2015-10-07 23:56:38 -0700
+F, [2015-10-07T23:56:38.834241 #3160] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/rack/thread_handler_extension.rb:94:in `process_request'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:151:in `accept_and_process_next_request'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:112:in `main_loop'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler.rb:415:in `block (3 levels) in start_threads'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/utils.rb:112:in `block in create_thread_and_abort_on_exception'
+
+
+I, [2015-10-07T23:56:38.839553 #3160]  INFO -- : Started GET "/wladder/javascripts/application.js" for 73.235.44.54 at 2015-10-07 23:56:38 -0700
+F, [2015-10-07T23:56:38.840393 #3160] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/rack/thread_handler_extension.rb:94:in `process_request'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:151:in `accept_and_process_next_request'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:112:in `main_loop'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler.rb:415:in `block (3 levels) in start_threads'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/utils.rb:112:in `block in create_thread_and_abort_on_exception'
+
+
+I, [2015-10-07T23:57:02.369258 #3160]  INFO -- : Started GET "/wladder/query?utf8=%E2%9C%93&step1=ghkj&step2=gk&step3=gkj&step4=gkjhkj&step5=hkjh&commit=Try" for 73.235.44.54 at 2015-10-07 23:57:02 -0700
+I, [2015-10-07T23:57:02.370353 #3160]  INFO -- : Processing by HomeController#show as HTML
+I, [2015-10-07T23:57:02.370440 #3160]  INFO -- :   Parameters: {"utf8"=>"✓", "step1"=>"ghkj", "step2"=>"gk", "step3"=>"gkj", "step4"=>"gkjhkj", "step5"=>"hkjh", "commit"=>"Try"}
+I, [2015-10-07T23:57:02.371484 #3160]  INFO -- :   Rendered home/show.html.erb within layouts/application (0.1ms)
+I, [2015-10-07T23:57:02.372281 #3160]  INFO -- : Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+I, [2015-10-07T23:57:02.669908 #3160]  INFO -- : Started GET "/wladder/stylesheets/application.css" for 73.235.44.54 at 2015-10-07 23:57:02 -0700
+F, [2015-10-07T23:57:02.671667 #3160] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/rack/thread_handler_extension.rb:94:in `process_request'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:151:in `accept_and_process_next_request'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:112:in `main_loop'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler.rb:415:in `block (3 levels) in start_threads'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/utils.rb:112:in `block in create_thread_and_abort_on_exception'
+
+
+I, [2015-10-07T23:57:02.977470 #3160]  INFO -- : Started GET "/wladder/javascripts/application.js" for 73.235.44.54 at 2015-10-07 23:57:02 -0700
+F, [2015-10-07T23:57:02.978815 #3160] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/rack/thread_handler_extension.rb:94:in `process_request'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:151:in `accept_and_process_next_request'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler/thread_handler.rb:112:in `main_loop'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/request_handler.rb:415:in `block (3 levels) in start_threads'
+  passenger (5.0.20) src/ruby_supportlib/phusion_passenger/utils.rb:112:in `block in create_thread_and_abort_on_exception'
+
+

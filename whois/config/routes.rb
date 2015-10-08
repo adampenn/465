@@ -54,7 +54,7 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
 
-  root "home#index"
-  get 'query',to:'home#show'
+root "home#index"
+get 'query',to:'home#show'
 
 end

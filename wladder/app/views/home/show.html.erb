@@ -1,0 +1,12 @@
+<a href="http://162.243.158.152/wladder">Play Again</a>
+<br>
+<%if @validInput == false%>
+  <h2>you win!</h2>
+<%else%>
+  <h2>you lose!</h2>
+<%end%>
+<h1><%=@startWord%></h1>
+<%@words.each do |x| %>
+<%=x%><br>
+<%end%> 
+<h1><%=@endWord%></h1>
