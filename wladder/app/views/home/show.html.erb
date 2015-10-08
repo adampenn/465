@@ -5,8 +5,10 @@
 <%else%>
   <h2>you lose!</h2>
 <%end%>
-<h1><%=@startWord%></h1>
-<%@words.each do |x| %>
-<%=x%><br>
-<%end%> 
-<h1><%=@endWord%></h1>
+<p>
+  <h3>Start Word: <%=@startWord%></h3>
+  <%@words.each do |x| %>
+  <%=x%><br>
+  <%end%> 
+  <h3>End Word: <%=@endWord%></h3>
+</p>

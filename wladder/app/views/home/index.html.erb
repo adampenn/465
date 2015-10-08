@@ -5,7 +5,7 @@
 <%= form_tag(query_path, method: "get") do  %>
     <%@startWord = dictionary.sample%>
     <p>Start: <%=@startWord%><br>
-    <% hidden_field_tag(:startWord, value = @startWord)%>
+    <%= hidden_field_tag(:startWord, value = @startWord)%>
     Step 1: <%= text_field_tag(:step1) %><br>
     Step 2: <%= text_field_tag(:step2) %><br>
     Step 3: <%= text_field_tag(:step3) %><br>
@@ -13,6 +13,6 @@
     Step 5: <%= text_field_tag(:step5) %><br>
     <%@endWord = dictionary.sample%>
     End: <%=@endWord%> 
-    <% hidden_field_tag(:endWord, value = @endWord) %>
+    <%= hidden_field_tag(:endWord, value = @endWord) %>
     <%= submit_tag("Try") %></p>
 <% end %>
