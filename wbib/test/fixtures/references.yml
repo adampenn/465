@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  URL: MyText
+  time: 2015-10-12 18:25:53
+
+two:
+  URL: MyText
+  time: 2015-10-12 18:25:53

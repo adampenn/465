@@ -1,0 +1,10 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @topic.title %>
+</p>
+
+<%= link_to 'Show Referneces', topic_refereneces_path(@topic) %> |
+<%= link_to 'Edit', edit_topic_path(@topic) %> |
+<%= link_to 'Show all Topics', topics_path %>
