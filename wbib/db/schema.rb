@@ -15,10 +15,12 @@ ActiveRecord::Schema.define(version: 20151013012553) do
 
   create_table "references", force: :cascade do |t|
     t.text     "URL"
-    t.datetime "time"
+    t.integer  "topic_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  add_index "references", ["topic_id"], name: "index_references_on_topic_id"
 
   create_table "topics", force: :cascade do |t|
     t.text     "title"

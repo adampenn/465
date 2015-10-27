@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @topic.title %>
+  <strong>Description:</strong>
+  <%= @topic.description %>
+</p>
+
+  <table border="1">
+    <thead>
+      <tr>
+        <th>URL</th>
+        <th>Time</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+  
+    <tbody>
+      <% @references.each do |r| %>
+        <tr>
+    	  <td><%= link_to "#{r.URL}", "#{r.URL}", :target => "_blank" %></td>
+    	  <td><%= r.created_at %></td>
+  	  <td><%= link_to 'Edit', edit_reference_path(r) %></td>
+	  <td><%= link_to 'Destroy', r, method: :delete, data: {confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+<%= link_to 'New reference', new_topic_reference_path(@topic) %> | 
+<%= link_to 'Edit topic', edit_topic_path(@topic) %> | 
+<%= link_to 'Show all Topics', topics_path %>
+
+

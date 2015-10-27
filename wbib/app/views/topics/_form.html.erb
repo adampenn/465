@@ -1,14 +1,24 @@
 <%= form_for(@topic) do |f| %>
   <% if @topic.errors.any? %>
-   <div id="Error_explanation">
-     <h2><%= pluralize(@topic.errors.count, "error") %> prohibited this topic from being saved:</h2>
+    <div id="Error_explanation">
+      <h2><%= pluralize(@topic.errors.count, "error") %> prohibited this topic from being saved:</h2>
      
-     <ul>
-     <% @topic.error.full_messages.each do |message| %>
-       <li><%= message %></li>
-     <% end %>
-     </ul>
-   </div>
- <% end %>
+      <ul>
+      <% @topic.error.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
 
- <div class="field">
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %><br>
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </div>
+  <div class="actions">
+    <br><%= f.submit %>
+  </div>
+<% end %>
+

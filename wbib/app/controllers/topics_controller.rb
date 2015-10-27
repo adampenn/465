@@ -6,10 +6,12 @@ class TopicsController < ActionController::Base
   before_action :set_topic,  only: [:show, :edit, :update, :destroy]
   
   def index
-    @topic = Topic.all
+    @topics = Topic.all
   end
 
   def show
+    redirect_to topics_url
+    #@references = @topic.references
   end
 
   def new 
@@ -20,10 +22,18 @@ class TopicsController < ActionController::Base
   end
 
   def create
-    @topic = topic.new(topic_params)
+    @topic = Topic.new(topic_params)
     if @topic.save
-      redirect_to @topic, notice: 'Topic was updated successfully'
+      redirect_to topics_url, notice: 'Topic was updated successfully'
     else 
+      render :edit
+    end
+  end
+
+  def update
+    if @topic.update(topic_params)
+      redirect_to @topic, notice: 'Topic was successfully updated.'
+    else
       render :edit
     end
   end
@@ -33,14 +43,12 @@ class TopicsController < ActionController::Base
     redirect_to topics_url
   end
 
-  private
-    def set_topic
-      @topic = Topic.find(params[:id])
-    end
-  
-    def topic_params
-      params.require(:topic).permit(:title, :description)
-    end
+  def set_topic
+    @topic = Topic.find(params[:id])
+  end
 
+  def topic_params
+    params.require(:topic).permit(:title, :description)
+  end
 end
 

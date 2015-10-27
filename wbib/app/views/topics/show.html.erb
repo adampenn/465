@@ -1,10 +1,28 @@
-<p id="notice"><%= notice %></p>
+<h1>Listing Topics</h1>
 
-<p>
-  <strong>Title:</strong>
-  <%= @topic.title %>
-</p>
+<table border="1">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th colspan="5"></th>
+    <tr>
+  </thead>
 
-<%= link_to 'Show Referneces', topic_refereneces_path(@topic) %> |
-<%= link_to 'Edit', edit_topic_path(@topic) %> |
-<%= link_to 'Show all Topics', topics_path %>
+  <tbody>
+    <% @topics.each do |topic| %>
+      <tr>
+        <td><%= topic.title %></td>
+	<td><%= topic.description %></td>
+	<td><%= link_to 'Show', topic_references_path(topic) %></td>
+	<td><%= link_to 'Edit', edit_topic_path(topic) %></td>
+        <td><%= button_to 'Destroy', topic, method: :delete, data: { confirm: 'Are you sure?' } %></td> 
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Topic', new_topic_path %>
+

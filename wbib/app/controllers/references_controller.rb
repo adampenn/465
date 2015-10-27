@@ -33,7 +33,7 @@ class ReferencesController < ApplicationController
 
   def destroy
     @reference.destroy
-    redirect_to professor_references_utl(@reference.topic), notice: 'Reference deleted'
+    redirect_to topic_references_url(@reference.topic), notice: 'Reference deleted'
   end
 
   private
