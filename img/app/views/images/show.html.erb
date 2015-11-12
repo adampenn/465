@@ -11,6 +11,11 @@
 </p>
 
 <p>
+  <strong>Image:</strong>
+  <%= image_tag root_url + "/images/" + @image.filename, size: "100x100", alt: @image.filename %>
+</p>
+
+<p>
   <strong>User:</strong>
   <%= @image.user_id %>
 </p>

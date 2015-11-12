@@ -25,15 +25,19 @@ class ImagesController < ApplicationController
   # POST /images.json
   def create
     @image = Image.new(image_params)
+    @image.filename = (0...8).map { (65 + rand(26)).chr }.join # got algorithm from http://stackoverflow.com/questions/88311/how-best-to-generate-a-random-string-in-ruby
+    @image.user_id = current_user.id
 
-    respond_to do |format|
-      if @image.save
-        format.html { redirect_to @image, notice: 'Image was successfully created.' }
-        format.json { render :show, status: :created, location: @image }
-      else
-        format.html { render :new }
-        format.json { render json: @image.errors, status: :unprocessable_entity }
-      end
+    @uploaded_io = params[:image][:uploaded_file]
+
+    File.open(Rails.root.join('public', 'images', @image.filename), 'wb') do |file|
+        file.write(@uploaded_io.read)
+    end
+
+    if @image.save
+      redirect_to @image, notice: 'Image was successfully created.'
+    else
+      render :new
     end
   end
 
@@ -62,7 +66,7 @@ class ImagesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
+   # Use callbacks to share common setup or constraints between actions.
     def set_image
       @image = Image.find(params[:id])
     end
