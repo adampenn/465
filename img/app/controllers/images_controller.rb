@@ -12,6 +12,7 @@ class ImagesController < ApplicationController
   # GET /images/1
   # GET /images/1.json
   def show
+    @users = User.all
   end
 
   # GET /images/new

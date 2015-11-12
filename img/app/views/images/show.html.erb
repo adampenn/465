@@ -1,19 +1,21 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Private:</strong>
-  <%= @image.private %>
-</p>
-
-<p>
-  <strong>Image:</strong>
   <%= image_tag root_url + "/images/" + @image.filename, size: "600x600", alt: @image.filename %>
 </p>
 
 <p>
-  <strong>User:</strong>
-  <%= @image.user_id %>
+  <strong>Owner:</strong>
+  <% @users.each do |user| %>
+    <% if user.id == @image.user_id %>
+      <%= user.name %>
+    <% end %>
+  <% end %>
 </p>
+
+<% if @image.user_id == current_user.id %>
+  
+<% end %>
 
 <%= link_to 'Edit', edit_image_path(@image) %> |
 <%= link_to 'Back', images_path %>
