@@ -1,30 +1,65 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Images</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Filename</th>
-      <th>Private</th>
-      <th>User</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @images.each do |image| %>
-      <tr>
-        <td><%= image_tag root_url + "/images/" + image.filename, size: "100x100", alt: image.filename %></td>
-        <td><%= image.user_id %></td>
-        <td><%= link_to 'Show', image %></td>
-        <td><%= link_to 'Edit', edit_image_path(image) %></td>
-        <td><%= link_to 'Destroy', image, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+<hr>
+<% pub = false %>
+<% pri = false %>
+<% sha = false %>
+<% @images.each do |image| %>
+  <% if image.private != true and image.user_id !=  current_user.id %>
+  <% if !pub %>
+    <h2>Public Images</h2>
+    <% pub = true %>
+  <% end %>
+    <%= image_tag root_url + "/images/" + image.filename, size: "100x100", alt: image.filename %>
+    <% @users.each do |user| %>
+      <% if user.id == image.user_id %>
+        <%= user.name %>
+      <% end %>
     <% end %>
-  </tbody>
-</table>
+    <%= link_to 'Show', image %>
+    <%= link_to 'Edit', edit_image_path(image) %>
+    <%= link_to 'Destroy', image, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <% end %>
+<% end %>
+<hr>
+<% @images.each do |image| %>
+ <%if image.user_id ==  current_user.id %>
+  <% if !pri %>
+    <h2>Images you own</h2>
+    <% pri = true %>
+  <% end %>
+    <%= image_tag root_url + "/images/" + image.filename, size: "100x100", alt: image.filename %>
+    <%= link_to 'Show', image %>
+    <%= link_to 'Edit', edit_image_path(image) %>
+    <%= link_to 'Destroy', image, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <% end %>
+<% end %>
+<hr>
+<% @imageusers.each do |imageuser| %>
+  <%if imageuser.user_id == current_user.id %>
+    <% @images.each do |image| %>
+      <% if !sha %>
+        <h2>Images shared with you</h2>
+        <% sha = true %>
+      <% end %>
+      <% if image.private == true and imageuser.image_id == image.id %>
+        <%= image_tag root_url + "/images/" + image.filename, size: "100x100", alt: image.filename %>
+        <% @users.each do |user| %>
+          <% if user.id == image.user_id %>
+            <%= user.name %>
+          <% end %>
+        <% end %>
+        <%= link_to 'Show', image %>
+        <%= link_to 'Edit', edit_image_path(image) %>
+        <%= link_to 'Destroy', image, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>
 
-<br>
+<br><br>
 
 <%= link_to 'New Image', new_image_path %>
+
+

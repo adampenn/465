@@ -1,18 +1,13 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Filename:</strong>
-  <%= @image.filename %>
-</p>
-
-<p>
   <strong>Private:</strong>
   <%= @image.private %>
 </p>
 
 <p>
   <strong>Image:</strong>
-  <%= image_tag root_url + "/images/" + @image.filename, size: "100x100", alt: @image.filename %>
+  <%= image_tag root_url + "/images/" + @image.filename, size: "600x600", alt: @image.filename %>
 </p>
 
 <p>
