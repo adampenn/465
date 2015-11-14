@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <%= image_tag root_url + "/images/" + @image.filename, size: "600x600", alt: @image.filename %>
+  <%= image_tag root_url + "/images/" + @image.filename, size: "400x400", alt: @image.filename %>
 </p>
 
 <p>
@@ -13,9 +13,31 @@
   <% end %>
 </p>
 
-<% if @image.user_id == current_user.id %>
-  
-<% end %>
+<% if user_signed_in? && @image.user_id == current_user.id %>
+  <%= link_to 'Edit', edit_image_path(@image) %>
+  <hr>
+  <strong>Tags:</strong><br>
+  <% @tags.each do |tag| %>
+    <% if tag.image_id == @image.id %>
+      <%= tag.str %>
+      <%= link_to 'Edit', edit_tag_path(tag) %> |
+      <%= link_to 'Destroy', tag, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <br>
+    <% end %>
+  <% end %>
+  <%= link_to 'New Tag', new_tag_path %>
+  <hr>
+  <strong>Shared with:</strong>
 
-<%= link_to 'Edit', edit_image_path(@image) %> |
+  <%= collection_select(:user, :id, @user, :name, :email, {:prompt => true}) %>
+
+  <select name="Users">
+    <option value=""selected>Please select</option>
+    <% i = 0 %>
+    <% @users.each do |user| %>
+      <option value=<%user.id%> ><%=user.name+"  "+user.email%></option>
+    <% end %>
+  </select>
+<% end %>
+<hr>
 <%= link_to 'Back', images_path %>
