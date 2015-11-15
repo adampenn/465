@@ -1,41 +1,60 @@
 <p id="notice"><%= notice %></p>
-
 <p>
   <%= image_tag root_url + "/images/" + @image.filename, size: "400x400", alt: @image.filename %>
 </p>
 
 <p>
-  <strong>Owner:</strong>
-  <% @users.each do |user| %>
-    <% if user.id == @image.user_id %>
-      <%= user.name %>
-    <% end %>
+<strong>Owner:</strong>
+<% @users.each do |user| %>
+  <% if user.id == @image.user_id %>
+    <%= user.name %>
   <% end %>
+<% end %>
 </p>
-
-<% if user_signed_in? && @image.user_id == current_user.id %>
-  <%= link_to 'Edit', edit_image_path(@image) %>
-  <hr>
-  <strong>Tags:</strong><br>
-  <% @tags.each do |tag| %>
-    <% if tag.image_id == @image.id %>
-      <%= tag.str %>
-      <%= link_to 'Edit', edit_tag_path(tag) %> |
-      <%= link_to 'Destroy', tag, method: :delete, data: { confirm: 'Are you sure?' } %>
-      <br>
-    <% end %>
+<%= link_to 'Edit', edit_image_path(@image) %>
+<hr>
+<strong>Tags:</strong><br>
+<% @tags.each do |tag| %>
+  <% if tag.image_id == @image.id %>
+    <%= tag.str %>
+    <%= link_to 'Edit', edit_tag_path(tag) %> |
+    <%= link_to 'Destroy', tag, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <br>
   <% end %>
+<% end %>
+<% if user_signed_in? && @image.user_id == current_user.id %>
   <%= link_to 'New Tag', new_tag_path %>
   <hr>
-  <strong>Shared with:</strong>
-
-  <%= collection_select(:user, :id, @user, :name, :email, {:prompt => true}) %>
-
+  <strong>Shared with:</strong><br>
+  <% notShareWith = Array.new %>
+  <% @users.each do |user| %>
+    <% notShareWith.push(user) %>
+  <% end %>
+  <% shareWith = Array.new %>
+  <% @imageusers.each do |imageuser| %>
+    <% if imageuser.image_id == @image.id %>
+      <% @users.each do |user| %>
+        <% if imageuser.user_id == user.id %>
+          <%= user.name+" "+user.email %>
+	  <%= link_to 'Revoke Access', imageuser, method: :delete, data: { confirm: 'Are you sure?' } %><br>
+          <% shareWith.push(user) %>
+	<% end %>
+      <% end %>
+    <% end %>
+  <% end %>
+  <% notShareWith.each do |nsw| %>
+    <% shareWith.each do |sw| %>
+      <% index = notShareWith.index(sw) %>
+      <% if index %>
+        <% notShareWith.delete_at(index) %>
+      <% end %>
+    <% end %>
+  <% end %>
+  <br>Share with other user:<br>
   <select name="Users">
-    <option value=""selected>Please select</option>
-    <% i = 0 %>
-    <% @users.each do |user| %>
-      <option value=<%user.id%> ><%=user.name+"  "+user.email%></option>
+    <option value=""selected>Select user to add</option>
+    <% notShareWith.each do |user| %>
+      <option value=<%user.id%>><%=user.name+" "+user.email%></option>
     <% end %>
   </select>
 <% end %>

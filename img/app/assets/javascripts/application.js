@@ -13,4 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require bootstrap-sprockets
+//= netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css
+//= netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js
 //= require_tree .

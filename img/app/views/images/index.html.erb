@@ -1,6 +1,117 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Images</h1>
+
+<!--nav bar -->
+<% if user_signed_in? %>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Social Image Network</a>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><a href="#public">Public Images</a></li>
+          <li><a href="#youOwn">Images You Own</a></li>
+          <li><a href="#shared">Images Shared With You</a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+<% end %>
+<style>
+.navbar-default {
+  background-color: #000000;
+  border-color: #5e5e5e;
+}
+.navbar-default .navbar-brand {
+  color: #787878;
+}
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+  color: #f6f6f6;
+}
+.navbar-default .navbar-text {
+  color: #787878;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #787878;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  color: #f6f6f6;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu {
+  background-color: #000000;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a {
+  color: #787878;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a:hover,
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a:focus {
+  color: #f6f6f6;
+  background-color: #5e5e5e;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li > .divider {
+  background-color: #000000;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+  color: #f6f6f6;
+  background-color: #5e5e5e;
+}
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+  color: #f6f6f6;
+  background-color: #5e5e5e;
+}
+.navbar-default .navbar-toggle {
+  border-color: #5e5e5e;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background-color: #5e5e5e;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #787878;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #787878;
+}
+.navbar-default .navbar-link {
+  color: #787878;
+}
+.navbar-default .navbar-link:hover {
+  color: #f6f6f6;
+}
+
+@media (max-width: 767px) {
+  .navbar-fixed-top {
+    position: relative;
+    top: auto;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #787878;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #f6f6f6;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #f6f6f6;
+    background-color: #5e5e5e;
+  }
+}
+.image_box {
+    display: inline-block;
+    width: 200px;
+    height: 100px;
+    margin: 10px;
+}
+</style>
+<h1 style="color:#5e5e5e">Listing Images</h1>
 <hr>
 <% pub = false %>
 <% pri = false %>
@@ -9,70 +120,81 @@
   <table>
   <% @images.each do |image| %>
     <% if image.private != true %>
-    <% if !pub %>
-      <h2>Public Images</h2>
-      <% pub = true %>
-    <% end %>
-    <%= link_to image do %>
-      <%= image_tag root_url + "/images/" + image.filename, size: "100x100", alt: image.filename %>  
-    <% end %>
-      <% @users.each do |user| %>
-        <% if user.id == image.user_id %>
-          <%= user.name %>
-        <% end %>
+      <% if !pub %>
+        <h2 style="color:#5e5e5e">Public Images</h2>
+        <% pub = true %>
       <% end %>
+      <div class="image_box custom_font">
+        <%= link_to image do %>
+          <%= image_tag root_url + "/images/" + image.filename, size: "100x100", alt: image.filename %>  
+        <% end %>
+        <% @users.each do |user| %>
+          <% if user.id == image.user_id %>
+            <a style="color:#5e5e5e"><%= user.name %></a>
+          <% end %>
+        <% end %>
+      </div>
     <% end %>
   <% end %>
 <% end %>
 
 <% if user_signed_in? %>
+  <a name="public"></a>
   <% @images.each do |image| %>
     <% if image.private != true and image.user_id != current_user.id %>
       <% if !pub %>
         <h2>Public Images</h2>
         <% pub = true %>
       <% end %>
-      <%= link_to image do %>
-        <%= image_tag root_url + "/images/" + image.filename, size: "100x100", alt: image.filename %>  
-      <% end %>
-      <% @users.each do |user| %>
-        <% if user.id == image.user_id %>
-          <%= user.name %>
+      <div class="image_box">
+        <%= link_to image do %>
+          <%= image_tag root_url + "/images/" + image.filename, size: "100x100", alt: image.filename %>  
         <% end %>
-      <% end %>
+        <% @users.each do |user| %>
+          <% if user.id == image.user_id %>
+            <a style="color:#5e5e5e"><%= user.name %></a>
+          <% end %>
+        <% end %>
+      </div>
     <% end %>
   <% end %>
   <hr>
+  <a name="youOwn"></a>
   <% @images.each do |image| %>
     <%if image.user_id ==  current_user.id %>
       <% if !pri %>
-        <h2>Images you own</h2>
+        <h2 style="color:#5e5e5e">Images you own</h2>
         <% pri = true %>
       <% end %>
-      <%= link_to image do %>
-        <%= image_tag root_url + "/images/" + image.filename, size: "100x100", alt: image.filename %>
-      <% end %>
-      <%= link_to 'Edit', edit_image_path(image) %>
-      <%= link_to 'Destroy', image, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <div class="image_box">
+        <%= link_to image do %>
+          <%= image_tag root_url + "/images/" + image.filename, size: "100x100", alt: image.filename %>
+        <% end %>
+        <%= link_to 'Edit', edit_image_path(image) %> |
+        <%= link_to 'Destroy', image, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </div>
     <% end %>
   <% end %>
   <hr>
+  <a name="shared"></a>
   <% @imageusers.each do |imageuser| %>
     <%if imageuser.user_id == current_user.id %>
       <% @images.each do |image| %>
         <% if !sha %>
-          <h2>Images shared with you</h2>
+          <h2 style="color:#5e5e5e">Images shared with you</h2>
           <% sha = true %>
         <% end %>
         <% if image.private == true and imageuser.image_id == image.id %>
-          <%= link_to image do %>
-            <%= image_tag root_url + "/images/" + image.filename, size: "100x100", alt: image.filename %>
-          <% end %>
-          <% @users.each do |user| %>
-            <% if user.id == image.user_id %>
-              <%= user.name %>
+          <div class="image_box">
+            <%= link_to image do %>
+              <%= image_tag root_url + "/images/" + image.filename, size: "100x100", alt: image.filename %>
             <% end %>
-          <% end %>
+            <% @users.each do |user| %>
+              <% if user.id == image.user_id %>
+                <a style="color:#5e5e5e"><%= user.name %></a>
+              <% end %>
+            <% end %>
+	  </div>
         <% end %>
       <% end %>
     <% end %>
