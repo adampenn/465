@@ -53,12 +53,10 @@
         <% end %>
       <% end %>
     <% end %>
-    <% notShareWith.each do |nsw| %>
-      <% shareWith.each do |sw| %>
-        <% index = notShareWith.index(sw) %>
-        <% if index %>
-          <% notShareWith.delete_at(index) %>
-        <% end %>
+    <% shareWith.each do |sw| %>
+      <% index = notShareWith.index(sw) %>
+      <% if index %>
+        <% notShareWith.delete_at(index) %>
       <% end %>
     <% end %>
     <% @users.each do |user| %>
