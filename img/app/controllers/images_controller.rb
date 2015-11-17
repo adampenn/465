@@ -12,9 +12,11 @@ class ImagesController < ApplicationController
   # GET /images/1
   # GET /images/1.json
   def show
+    @tag = Tag.new
     @users = User.all
     @tags = Tag.all
     @imageusers = ImageUser.all
+    @imageuser = ImageUser.new
   end
 
   # GET /images/new
@@ -30,7 +32,7 @@ class ImagesController < ApplicationController
   # POST /images.json
   def create
     @image = Image.new(image_params)
-    @image.filename = (0...8).map { (65 + rand(26)).chr }.join # got algorithm from http://stackoverflow.com/questions/88311/how-best-to-generate-a-random-string-in-ruby
+    @image.filename = generate_filename
     @image.user_id = current_user.id
 
     @uploaded_io = params[:image][:uploaded_file]
@@ -45,6 +47,24 @@ class ImagesController < ApplicationController
       render :new
     end
   end
+
+  def generate_filename
+    # got algorithm from http://stackoverflow.com/questions/88311/how-best-to-generate-a-random-string-in-ruby
+    notUnique = true
+    while notUnique
+      notUnique = false
+      string = (0...8).map { (65 + rand(26)).chr }.join
+      string = string + ".jpg"
+      images = Image.all
+	images.each do |image|
+        if image.filename == string
+	  notUnique = true
+	end
+      end
+    end
+    return string
+   end
+  
 
   # PATCH/PUT /images/1
   # PATCH/PUT /images/1.json

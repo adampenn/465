@@ -1,9 +1,8 @@
-<p id="notice"><%= notice %></p>
+<p style="color:#6e5e5e" id="notice"><%= notice %></p>
 <p>
   <%= image_tag root_url + "/images/" + @image.filename, size: "400x400", alt: @image.filename %>
 </p>
-
-<p>
+<p style="color:#5e5e5e">
 <strong>Owner:</strong>
 <% @users.each do |user| %>
   <% if user.id == @image.user_id %>
@@ -11,52 +10,93 @@
   <% end %>
 <% end %>
 </p>
-<%= link_to 'Edit', edit_image_path(@image) %>
 <hr>
+<p style="color:#5e5e5e">
 <strong>Tags:</strong><br>
 <% @tags.each do |tag| %>
   <% if tag.image_id == @image.id %>
     <%= tag.str %>
-    <%= link_to 'Edit', edit_tag_path(tag) %> |
-    <%= link_to 'Destroy', tag, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <% if @image.user_id == current_user.id %>
+      <%= link_to 'Edit', edit_tag_path(tag) %> |
+      <%= link_to 'Destroy', tag, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <% end %>
     <br>
   <% end %>
 <% end %>
+</p>
 <% if user_signed_in? && @image.user_id == current_user.id %>
-  <%= link_to 'New Tag', new_tag_path %>
+  <div style="color:#5e5e5e" class="field">
+    <%= form_for @tag do |f| %>
+      <p><b>New tag:</b></p>
+      <%= f.text_field :str %>
+      <%= f.hidden_field :image_id ,:value => @image.id %>
+      <%= f.submit %>
+    <% end %> 
+  </div>
   <hr>
-  <strong>Shared with:</strong><br>
-  <% notShareWith = Array.new %>
-  <% @users.each do |user| %>
-    <% notShareWith.push(user) %>
-  <% end %>
-  <% shareWith = Array.new %>
-  <% @imageusers.each do |imageuser| %>
-    <% if imageuser.image_id == @image.id %>
-      <% @users.each do |user| %>
-        <% if imageuser.user_id == user.id %>
-          <%= user.name+" "+user.email %>
-	  <%= link_to 'Revoke Access', imageuser, method: :delete, data: { confirm: 'Are you sure?' } %><br>
-          <% shareWith.push(user) %>
-	<% end %>
+  <% if @image.private %>
+    <p style="color:#5e5e5e">
+    <strong>Shared with:</strong><br>
+    <% notShareWith = Array.new %>
+    <% @users.each do |user| %>
+      <% notShareWith.push(user) %>
+    <% end %>
+    <% shareWith = Array.new %>
+    <% @imageusers.each do |imageuser| %>
+      <% if imageuser.image_id == @image.id %>
+        <% @users.each do |user| %>
+          <% if imageuser.user_id == user.id %>
+            <%= user.name+" "+user.email %>
+	    <%= link_to 'Revoke Access', imageuser, method: :delete, data: { confirm: 'Are you sure?' } %><br>
+            <% shareWith.push(user) %>
+  	  <% end %>
+        <% end %>
       <% end %>
     <% end %>
-  <% end %>
-  <% notShareWith.each do |nsw| %>
-    <% shareWith.each do |sw| %>
-      <% index = notShareWith.index(sw) %>
-      <% if index %>
-        <% notShareWith.delete_at(index) %>
+    <% notShareWith.each do |nsw| %>
+      <% shareWith.each do |sw| %>
+        <% index = notShareWith.index(sw) %>
+        <% if index %>
+          <% notShareWith.delete_at(index) %>
+        <% end %>
       <% end %>
     <% end %>
-  <% end %>
-  <br>Share with other user:<br>
-  <select name="Users">
-    <option value=""selected>Select user to add</option>
-    <% notShareWith.each do |user| %>
-      <option value=<%user.id%>><%=user.name+" "+user.email%></option>
+    <% @users.each do |user| %>
+      <% if user.id == current_user.id %>
+        <% notShareWith.delete_at(notShareWith.index(user)) %>
+      <% end %>
     <% end %>
-  </select>
+    <br><b>Share with other user:</b><br>
+    <%= form_for @imageuser do |f| %>
+      <%= f.select :user_id, options_from_collection_for_select(notShareWith, 'id', 'name'), prompt: 'Select user to add' %>
+      <%= f.hidden_field :image_id ,:value => @image.id %>
+      <%= f.submit %>
+    <% end %>
+    <hr>
+  <% end %>
+  <style>
+    .box {
+      display: inline-block;
+      width: 300px;
+      height: 20px;
+      margin: 3px;
+      color: #5e5e5e;
+    }
+  </style>
+  <div class="box">
+    <strong >Edit Image Option:</strong><br>
+    <%= form_for(@image) do |f| %>
+      <div class="field">
+        <%= link_to 'Delete Image',@image, method: :delete, data: { confirm: 'Are you sure?' } %> |
+        <b>Make</b> <%= f.label :private %>
+        <%= f.check_box :private %><br>
+      </div>
+      <div class="actions">
+        <%= f.submit %>
+      </div>
+    </div>
+  <% end %>
 <% end %>
+</p>
 <hr>
 <%= link_to 'Back', images_path %>

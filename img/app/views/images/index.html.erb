@@ -21,6 +21,7 @@
           <li><a href="#public">Public Images</a></li>
           <li><a href="#youOwn">Images You Own</a></li>
           <li><a href="#shared">Images Shared With You</a></li>
+	  <li><%= link_to 'New Image', new_image_path %></li>
         </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
@@ -104,11 +105,17 @@
     background-color: #5e5e5e;
   }
 }
+.image_box_own {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+}
 .image_box {
     display: inline-block;
     width: 200px;
     height: 100px;
-    margin: 10px;
+    margin: 5px;
 }
 </style>
 <h1 style="color:#5e5e5e">Listing Images</h1>
@@ -143,7 +150,7 @@
   <% @images.each do |image| %>
     <% if image.private != true and image.user_id != current_user.id %>
       <% if !pub %>
-        <h2>Public Images</h2>
+        <h2 style="color:#5e5e5e">Public Images</h2>
         <% pub = true %>
       <% end %>
       <div class="image_box">
@@ -166,12 +173,10 @@
         <h2 style="color:#5e5e5e">Images you own</h2>
         <% pri = true %>
       <% end %>
-      <div class="image_box">
+      <div class="image_box_own">
         <%= link_to image do %>
           <%= image_tag root_url + "/images/" + image.filename, size: "100x100", alt: image.filename %>
         <% end %>
-        <%= link_to 'Edit', edit_image_path(image) %> |
-        <%= link_to 'Destroy', image, method: :delete, data: { confirm: 'Are you sure?' } %>
       </div>
     <% end %>
   <% end %>
@@ -203,7 +208,5 @@
   <br><br>
 
   <hr>
-
-  <%= link_to 'New Image', new_image_path %>
 
 <% end %>

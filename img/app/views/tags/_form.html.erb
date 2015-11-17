@@ -1,9 +1,9 @@
 <%= form_for(@tag) do |f| %>
   <% if @tag.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@tag.errors.count, "error") %> prohibited this tag from being saved:</h2>
+      <h2 style="color:#5e5e5e"><%= pluralize(@tag.errors.count, "error") %> prohibited this tag from being saved:</h2>
 
-      <ul>
+      <ul style="color:#5e5e5e">
       <% @tag.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
@@ -11,14 +11,11 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div style="color:#5e5e5e" class="field">
     <%= f.label :str %><br>
     <%= f.text_field :str %>
   </div>
-  <div class="field">
-    <%= f.label :image_id %><br>
-    <%= f.number_field :image_id %>
-  </div>
+  <br>
   <div class="actions">
     <%= f.submit %>
   </div>
